@@ -1,9 +1,12 @@
-import React from 'react';
+import Header from '@/components/layout/Header';
 
 const App = () => {
   return (
-    <div className="text-3xl underline text-blue-400">
-      <div>Dashboard</div>
+    <div className="min-h-screen bg-white font-inter">
+      <Header />
+      <main className="max-w-7xl mx-auto px-4 py-6">
+        <p className="text-sm">Contenido principal</p>
+      </main>
     </div>
   );
 };
