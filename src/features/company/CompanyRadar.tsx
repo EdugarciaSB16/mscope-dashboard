@@ -11,12 +11,12 @@ import {
 
 const data = [
   { subject: 'Growth', company: 90, microsector: 60, sme: 70 },
-  { subject: 'Size', company: 75, microsector: 65, sme: 80 },
-  { subject: 'Margins', company: 85, microsector: 72, sme: 77 },
-  { subject: 'Sharpe', company: 70, microsector: 60, sme: 69 },
-  { subject: 'Balance', company: 65, microsector: 50, sme: 55 },
-  { subject: 'Autonomy', company: 80, microsector: 65, sme: 73 },
-  { subject: 'Profit', company: 78, microsector: 67, sme: 70 },
+  { subject: 'Margins', company: 75, microsector: 65, sme: 80 },
+  { subject: 'Sharpe', company: 85, microsector: 72, sme: 77 },
+  { subject: 'Balance', company: 70, microsector: 60, sme: 69 },
+  { subject: 'Autonomy', company: 65, microsector: 50, sme: 55 },
+  { subject: 'Profit', company: 80, microsector: 65, sme: 73 },
+  { subject: 'Size', company: 78, microsector: 67, sme: 70 },
 ];
 
 const CompanyRadar = () => {
@@ -26,12 +26,21 @@ const CompanyRadar = () => {
         <h2 className="text-base font-medium text-zinc-900 mb-4">
           mscope score indicators
         </h2>
-        <div className="w-full h-72">
+        <div className="w-full h-60">
           <ResponsiveContainer width="100%" height="100%">
-            <RadarChart data={data}>
+            <RadarChart
+              data={data}
+              margin={{ top: 0, right: 5, bottom: 0, left: 5 }}
+            >
               <PolarGrid />
-              <PolarAngleAxis dataKey="subject" />
-              <PolarRadiusAxis />
+              <PolarAngleAxis
+                dataKey="subject"
+                tick={{
+                  fill: '#8f8f91',
+                  fontSize: 11,
+                }}
+              />
+              <PolarRadiusAxis tick={{ fontSize: 10 }} />
               <Radar
                 name="Company"
                 dataKey="company"
@@ -53,7 +62,14 @@ const CompanyRadar = () => {
                 fill="#8f8f91"
                 fillOpacity={0.2}
               />
-              <Legend />
+              <Legend
+                wrapperStyle={{
+                  fontSize: '11px',
+                  paddingTop: '8px',
+                }}
+                iconSize={8}
+                align="center"
+              />
             </RadarChart>
           </ResponsiveContainer>
         </div>
