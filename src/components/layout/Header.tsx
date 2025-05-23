@@ -3,12 +3,13 @@ import logo from '@/assets/logo.png';
 import { navigationLinks } from '@/data';
 import SearchBox from '@/components/layout/SearchBox';
 import UserProfile from '@/components/layout/UserProfile';
+import MobileMenu from '@/components/layout/MobileMenu';
 
 const Header: React.FC = () => {
   const currentPath = '/companies';
 
   return (
-    <header className="w-full h-[52px] bg-[#FCFCFD] border-b border-[#E6E6E6]">
+    <header className="w-full h-[52px] bg-[#FCFCFD] border-b border-[#E6E6E6] sticky top-0 z-50">
       <div className="max-w-[1280px] h-full mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <img
@@ -18,7 +19,7 @@ const Header: React.FC = () => {
           />
         </div>
 
-        <nav className="flex items-center gap-6 h-full">
+        <nav className="hidden lg:flex items-center gap-6 h-full">
           {navigationLinks.map(({ label, href, isBeta }) => {
             const isActive = currentPath === href;
 
@@ -47,9 +48,14 @@ const Header: React.FC = () => {
             );
           })}
         </nav>
-        <div className="flex items-center gap-6">
+
+        <div className="hidden lg:flex items-center gap-6">
           <SearchBox />
           <UserProfile />
+        </div>
+
+        <div className="lg:hidden">
+          <MobileMenu />
         </div>
       </div>
     </header>
