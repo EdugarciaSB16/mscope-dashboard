@@ -1,9 +1,9 @@
 import React from 'react';
 import logo from '@/assets/logo.png';
-import { navigationLinks } from '@/data';
 import SearchBox from '@/components/layout/SearchBox';
 import UserProfile from '@/components/layout/UserProfile';
 import MobileMenu from '@/components/layout/MobileMenu';
+import { navigationLinks } from '@/data';
 
 const Header: React.FC = () => {
   const currentPath = '/companies';
