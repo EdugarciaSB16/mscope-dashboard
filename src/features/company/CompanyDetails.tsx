@@ -1,6 +1,5 @@
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
 import {
   ArrowUp,
   Asterisk,
@@ -34,30 +33,27 @@ const CompanyDetails = () => {
             enhance textile production capabilities.
           </p>
 
-          <div className="flex flex-col md:flex-row gap-6">
-            <div className="space-y-1">
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="flex flex-col justify-between">
               <span className="text-xs text-[#8f8f91] leading-4">
                 Microsector
               </span>
-              <Badge className="bg-[#e2f0eb] text-[#209464] px-1.5 py-1 h-auto hover:bg-[#e2f0eb] hover:text-[#209464]">
+              <Badge className="bg-[#e2f0eb] text-[#209464] px-1.5 h-auto hover:bg-[#e2f0eb] hover:text-[#209464] mt-2">
                 <ArrowUp className="w-[11px] h-[11px] mr-1" />
                 <span className="text-sm font-medium">Operators</span>
               </Badge>
             </div>
 
-            <div className="space-y-1">
+            <div className="flex flex-col justify-between">
               <span className="text-xs text-[#8f8f91] leading-4">
                 Assessment of the company's classification
               </span>
-              <div className="flex items-center">
-                <Separator orientation="vertical" className="h-6 mr-3" />
-                <div className="flex gap-2">
-                  <div className="flex items-center justify-center w-6 h-6 bg-[#e6e6e6] rounded-full">
-                    <ThumbsUp className="w-4 h-4" />
-                  </div>
-                  <div className="flex items-center justify-center w-6 h-6 bg-[#e6e6e6] rounded-full">
-                    <ThumbsDown className="w-4 h-4" />
-                  </div>
+              <div className="flex gap-2">
+                <div className="flex items-center justify-center w-6 h-6 bg-[#e6e6e6] rounded-full">
+                  <ThumbsUp className="w-4 h-4" />
+                </div>
+                <div className="flex items-center justify-center w-6 h-6 bg-[#e6e6e6] rounded-full">
+                  <ThumbsDown className="w-4 h-4" />
                 </div>
               </div>
             </div>
