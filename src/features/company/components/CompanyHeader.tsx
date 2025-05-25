@@ -1,8 +1,8 @@
 import { Card, CardContent } from '@/components/ui/card';
-import CompanyDetails from './CompanyDetails';
-import CompanyFinancials from './CompanyFinancials';
-import CompanyRadar from './CompanyRadar';
-import CompanyTab from './CompanyTab';
+import CompanyDetails from '@/features/company/components/CompanyDetails';
+import CompanyFinancials from '@/features/company/components/CompanyFinancials';
+import CompanyRadar from '@/features/company/components/CompanyRadar';
+import CompanyTab from '@/features/company/components/CompanyTab';
 
 const CompanyHeader = () => {
   return (
