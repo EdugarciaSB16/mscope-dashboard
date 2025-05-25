@@ -12,7 +12,7 @@ const CompanyTab: React.FC = () => {
 
   return (
     <div className="px-2">
-      <Tabs defaultValue="summary" className="w-fit">
+      <Tabs defaultValue="financials" className="w-fit">
         <TabsList className="bg-[#e6e6e6] rounded-[4px] p-[2px] h-auto overflow-x-auto max-w-[calc(100vw-48px)] sm:max-w-none flex flex-nowrap">
           {tabItems.map((tab) => (
             <TabsTrigger
