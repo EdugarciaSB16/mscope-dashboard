@@ -29,12 +29,12 @@ const data = [
   { year: '2022', nfdEbitda: 132, capexEbitda: 85 },
 ];
 
-const CompanyFinancialsAccordion = () => {
+const CompanyAccordion = () => {
   return (
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1">
         <AccordionTrigger className="text-sm font-medium">
-          NFD/EBITDA and CAPEX/EBITDA
+          Income Statement
         </AccordionTrigger>
         <AccordionContent>
           <div className="w-full h-[300px] mt-4">
@@ -69,14 +69,14 @@ const CompanyFinancialsAccordion = () => {
 
       <AccordionItem value="item-2">
         <AccordionTrigger className="text-sm font-medium">
-          Historical Financials
+          Balance Sheet
         </AccordionTrigger>
         <AccordionContent>{/* Contenido pendiente */}</AccordionContent>
       </AccordionItem>
 
       <AccordionItem value="item-3">
         <AccordionTrigger className="text-sm font-medium">
-          Financial Metrics
+          Cashflow
         </AccordionTrigger>
         <AccordionContent>{/* Contenido pendiente */}</AccordionContent>
       </AccordionItem>
@@ -84,4 +84,4 @@ const CompanyFinancialsAccordion = () => {
   );
 };
 
-export default CompanyFinancialsAccordion;
+export default CompanyAccordion;
