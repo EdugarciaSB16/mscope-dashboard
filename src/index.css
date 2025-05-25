@@ -5,6 +5,21 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* Font */
+  --font-inter: 'Inter', sans-serif;
+
+  /* Backgrounds and surfaces */
+  --background: #fcfcfd;
+  --surface: #fcfcfd;
+
+  /* Text colors */
+  --foreground: #18181b;
+  --text-muted: #626266;
+
+  /* Borders and dividers */
+  --border: #e6e6e6;
+  --ring: #e6e6e6;
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -118,8 +133,4 @@
   body {
     @apply bg-background text-foreground;
   }
-}
-
-@theme {
-  --font-inter: 'Inter', sans-serif;
 }
