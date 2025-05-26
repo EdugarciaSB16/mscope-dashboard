@@ -1,3 +1,5 @@
+import * as XLSX from 'xlsx';
+import { saveAs } from 'file-saver';
 import {
   Table,
   TableBody,
@@ -6,6 +8,8 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import { Button } from '@/components/ui/button';
+import { DownloadIcon } from 'lucide-react';
 
 const incomeStatement = [
   {
@@ -116,8 +120,51 @@ const years = [
 ];
 
 const IncomeStatementTable = () => {
+  const exportToExcel = () => {
+    const headers = [
+      'Income Statement (€M)',
+      '5Y CAGR (%)',
+      'Turnover (%)',
+      ...years,
+    ];
+
+    const rows = incomeStatement.map((row) => [
+      row.label,
+      row.cagr,
+      row.turnoverPct,
+      ...row.values,
+    ]);
+
+    const worksheet = XLSX.utils.aoa_to_sheet([headers, ...rows]);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Income Statement');
+
+    const excelBuffer = XLSX.write(workbook, {
+      bookType: 'xlsx',
+      type: 'array',
+    });
+
+    const blob = new Blob([excelBuffer], {
+      type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+    });
+
+    saveAs(blob, 'income-statement.xlsx');
+  };
+
   return (
-    <div className="mt-8 overflow-auto">
+    <div className="mt-10 overflow-auto">
+      <div className="flex justify-end mb-4">
+        <Button
+          variant="outline"
+          onClick={exportToExcel}
+          className="flex items-center gap-2 h-auto font-semibold text-color-palette-palette-content-high border-black cursor-pointer"
+        >
+          <DownloadIcon className="w-4 h-4" />
+          <span className="font-mid-m-semibold text-[14px] leading-[18px]">
+            Export
+          </span>
+        </Button>
+      </div>
       <Table className="border-separate border-spacing-y-2">
         <TableHeader>
           <TableRow className="text-[#626266]">
