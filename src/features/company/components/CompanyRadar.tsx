@@ -7,16 +7,7 @@ import {
   ResponsiveContainer,
   Legend,
 } from 'recharts';
-
-const data = [
-  { subject: 'Growth', company: 90, microsector: 60, sme: 70 },
-  { subject: 'Margins', company: 75, microsector: 65, sme: 80 },
-  { subject: 'Sharpe', company: 85, microsector: 72, sme: 77 },
-  { subject: 'Balance', company: 70, microsector: 60, sme: 69 },
-  { subject: 'Autonomy', company: 65, microsector: 50, sme: 55 },
-  { subject: 'Profit', company: 80, microsector: 65, sme: 73 },
-  { subject: 'Size', company: 78, microsector: 67, sme: 70 },
-];
+import { scoreIndicators } from '@/data';
 
 const CompanyRadar = () => {
   return (
@@ -27,7 +18,7 @@ const CompanyRadar = () => {
       <div className="w-full h-60">
         <ResponsiveContainer width="100%" height="100%">
           <RadarChart
-            data={data}
+            data={scoreIndicators}
             margin={{ top: 0, right: 5, bottom: 0, left: 5 }}
           >
             <PolarGrid />

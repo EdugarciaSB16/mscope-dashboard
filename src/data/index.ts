@@ -53,6 +53,16 @@ export const company = {
   },
 };
 
+export const financialMetrics = [
+  { label: 'Score', value: 'A1', isScore: true },
+  { label: 'Turnover', value: '€30M' },
+  { label: 'EBITDA', value: '€5M' },
+  { label: '5Y T/O CAGR', value: '6.1%' },
+  { label: '5Y EBITDA CAGR', value: '4.3%' },
+  { label: 'EBITDA Margin', value: '8.5%' },
+  { label: 'NFD/EBITDA', value: '2.4x' },
+];
+
 export const historicalFinancialData = [
   { year: '2012', turnover: 10, ebitda: 2.1, ebitdaMargin: 2.4 },
   { year: '2013', turnover: 28, ebitda: 4.4, ebitdaMargin: 3.6 },
@@ -187,4 +197,22 @@ export const nfdCapexData = [
   { year: '2020', nfdEbitda: 1.1, capexEbitda: 3.0 },
   { year: '2021', nfdEbitda: 0.87, capexEbitda: 3.5 },
   { year: '2022', nfdEbitda: 0.85, capexEbitda: 2.6 },
+];
+
+export const scoreIndicators = [
+  { subject: 'Growth', company: 90, microsector: 60, sme: 70 },
+  { subject: 'Margins', company: 75, microsector: 65, sme: 80 },
+  { subject: 'Sharpe', company: 85, microsector: 72, sme: 77 },
+  { subject: 'Balance', company: 70, microsector: 60, sme: 69 },
+  { subject: 'Autonomy', company: 65, microsector: 50, sme: 55 },
+  { subject: 'Profit', company: 80, microsector: 65, sme: 73 },
+  { subject: 'Size', company: 78, microsector: 67, sme: 70 },
+];
+
+export const tabItems = [
+  { id: 'summary', label: 'Summary' },
+  { id: 'financials', label: 'Financials' },
+  { id: 'peers', label: 'Peers' },
+  { id: 'company-info', label: 'Company info' },
+  { id: 'news-events', label: 'News and events' },
 ];

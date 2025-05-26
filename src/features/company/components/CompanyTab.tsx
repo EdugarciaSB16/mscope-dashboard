@@ -1,15 +1,8 @@
 import React from 'react';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { tabItems } from '@/data';
 
 const CompanyTab: React.FC = () => {
-  const tabItems = [
-    { id: 'summary', label: 'Summary' },
-    { id: 'financials', label: 'Financials' },
-    { id: 'peers', label: 'Peers' },
-    { id: 'company-info', label: 'Company info' },
-    { id: 'news-events', label: 'News and events' },
-  ];
-
   return (
     <div className="px-2">
       <Tabs defaultValue="financials" className="w-fit">
