@@ -6,6 +6,7 @@ import {
 } from '@/components/ui/accordion';
 import HistoricalFinancialChart from '@/features/tabs/financials/components/HistoricalFinancialChart';
 import NfdCapexChart from '@/features/tabs/financials/components/NfdCapexChart';
+import IncomeStatementTable from '@/features/tabs/financials/components/IncomeStatementTable';
 
 const CompanyAccordion = () => {
   return (
@@ -27,6 +28,9 @@ const CompanyAccordion = () => {
             <div className="w-full h-[300px] md:h-[400px]">
               <NfdCapexChart />
             </div>
+          </div>
+          <div className="w-full pt-5">
+            <IncomeStatementTable />
           </div>
         </AccordionContent>
       </AccordionItem>
