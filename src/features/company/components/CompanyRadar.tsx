@@ -6,6 +6,7 @@ import {
   PolarRadiusAxis,
   ResponsiveContainer,
   Legend,
+  Tooltip,
 } from 'recharts';
 import { scoreIndicators } from '@/data';
 
@@ -30,26 +31,34 @@ const CompanyRadar = () => {
               }}
             />
             <PolarRadiusAxis tick={{ fontSize: 10 }} />
+
+            <Tooltip
+              wrapperStyle={{ fontSize: '12px' }}
+              formatter={(value, name) => [`${value}`, name]}
+            />
             <Radar
               name="Company"
               dataKey="company"
               stroke="#209464"
               fill="#209464"
               fillOpacity={0.6}
+              dot={{ r: 3 }}
             />
             <Radar
               name="Microsector"
               dataKey="microsector"
-              stroke="#58585a"
-              fill="#58585a"
+              stroke="#58585A"
+              fill="#58585A"
               fillOpacity={0.3}
+              dot={{ r: 3 }}
             />
             <Radar
               name="SME Index"
               dataKey="sme"
-              stroke="#8f8f91"
-              fill="#8f8f91"
+              stroke="#D8D8D9"
+              fill="#D8D8D9"
               fillOpacity={0.2}
+              dot={{ r: 3 }}
             />
             <Legend
               wrapperStyle={{
