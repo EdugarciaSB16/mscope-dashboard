@@ -11,15 +11,15 @@ import {
 
 const data = [
   { year: '2012', nfdEbitda: 2.4, capexEbitda: 0.8 },
-  { year: '2013', nfdEbitda: 2.6, capexEbitda: 0.85 },
-  { year: '2014', nfdEbitda: 2.5, capexEbitda: 0.82 },
+  { year: '2013', nfdEbitda: 2.6, capexEbitda: 0.95 },
+  { year: '2014', nfdEbitda: 3.5, capexEbitda: 0.82 },
   { year: '2015', nfdEbitda: 2.3, capexEbitda: 0.78 },
   { year: '2016', nfdEbitda: 2.4, capexEbitda: 0.8 },
-  { year: '2017', nfdEbitda: 2.5, capexEbitda: 0.82 },
-  { year: '2018', nfdEbitda: 2.6, capexEbitda: 0.85 },
+  { year: '2017', nfdEbitda: 2.0, capexEbitda: 0.82 },
+  { year: '2018', nfdEbitda: 2.8, capexEbitda: 0.85 },
   { year: '2019', nfdEbitda: 2.7, capexEbitda: 0.88 },
-  { year: '2020', nfdEbitda: 2.8, capexEbitda: 0.9 },
-  { year: '2021', nfdEbitda: 2.7, capexEbitda: 0.87 },
+  { year: '2020', nfdEbitda: 3.0, capexEbitda: 1.1 },
+  { year: '2021', nfdEbitda: 3.5, capexEbitda: 0.87 },
   { year: '2022', nfdEbitda: 2.6, capexEbitda: 0.85 },
 ];
 
@@ -33,12 +33,12 @@ const NfdCapexChart = () => {
         <CartesianGrid strokeDasharray="3 3" stroke="#f5f5f5" />
         <XAxis
           dataKey="year"
-          tick={{ fill: '#666', fontSize: 12 }}
-          axisLine={{ stroke: '#E5E7EB' }}
+          tick={{ fill: '#8F8F91', fontSize: 12 }}
+          axisLine={{ stroke: '#8F8F91' }}
         />
         <YAxis
-          tick={{ fill: '#666', fontSize: 12 }}
-          axisLine={{ stroke: '#E5E7EB' }}
+          tick={{ fill: '#8F8F91', fontSize: 12 }}
+          axisLine={{ stroke: '#8F8F91' }}
           tickFormatter={(value) => `${value}x`}
         />
         <Tooltip
@@ -55,7 +55,7 @@ const NfdCapexChart = () => {
           type="monotone"
           dataKey="nfdEbitda"
           name="NFD/EBITDA"
-          stroke="#111827"
+          stroke="#58585A"
           strokeWidth={2}
           dot={false}
         />
@@ -63,7 +63,7 @@ const NfdCapexChart = () => {
           type="monotone"
           dataKey="capexEbitda"
           name="CAPEX/EBITDA"
-          stroke="#9CA3AF"
+          stroke="#D8D8D9"
           strokeWidth={2}
           dot={false}
         />
