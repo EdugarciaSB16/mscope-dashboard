@@ -34,7 +34,6 @@ const HistoricalFinancialChart = () => {
         <CartesianGrid strokeDasharray="3 3" stroke="#f5f5f5" />
         <XAxis
           dataKey="year"
-          scale="point"
           tick={{ fill: '#666', fontSize: 12 }}
           axisLine={{ stroke: '#E5E7EB' }}
         />
@@ -55,8 +54,8 @@ const HistoricalFinancialChart = () => {
         <Tooltip
           contentStyle={{ background: 'white', border: '1px solid #E5E7EB' }}
           formatter={(value, name) => {
-            if (name === 'EBITDA Margin') return `${value}%`;
-            return `€${value}M`;
+            if (name === 'EBITDA Margin') return [`${value}%`, name];
+            return [`€${value}M`, name];
           }}
         />
         <Legend
