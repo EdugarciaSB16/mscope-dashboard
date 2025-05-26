@@ -8,26 +8,13 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
-
-const data = [
-  { year: '2012', nfdEbitda: 0.8, capexEbitda: 2.4 },
-  { year: '2013', nfdEbitda: 0.95, capexEbitda: 2.6 },
-  { year: '2014', nfdEbitda: 0.82, capexEbitda: 3.5 },
-  { year: '2015', nfdEbitda: 0.78, capexEbitda: 2.3 },
-  { year: '2016', nfdEbitda: 0.8, capexEbitda: 2.4 },
-  { year: '2017', nfdEbitda: 0.82, capexEbitda: 2.0 },
-  { year: '2018', nfdEbitda: 0.85, capexEbitda: 2.8 },
-  { year: '2019', nfdEbitda: 0.88, capexEbitda: 2.7 },
-  { year: '2020', nfdEbitda: 1.1, capexEbitda: 3.0 },
-  { year: '2021', nfdEbitda: 0.87, capexEbitda: 3.5 },
-  { year: '2022', nfdEbitda: 0.85, capexEbitda: 2.6 },
-];
+import { nfdCapexData } from '@/data';
 
 const NfdCapexChart = () => {
   return (
     <ResponsiveContainer width="100%" height="100%">
       <LineChart
-        data={data}
+        data={nfdCapexData}
         margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
       >
         <CartesianGrid strokeDasharray="3 3" stroke="#f5f5f5" />
