@@ -13,6 +13,7 @@ const incomeStatement = [
     cagr: '27.2',
     turnoverPct: '100',
     values: Array(12).fill('5.2'),
+    bold: true,
   },
   {
     label: 'Cost of sales',
@@ -25,6 +26,7 @@ const incomeStatement = [
     cagr: '27.2',
     turnoverPct: '100',
     values: Array(12).fill('5.2'),
+    bold: true,
   },
   {
     label: 'Admin & Op. Expenses',
@@ -43,6 +45,7 @@ const incomeStatement = [
     cagr: '27.2',
     turnoverPct: '100',
     values: Array(12).fill('5.2'),
+    bold: true,
   },
   {
     label: 'Extraordinary Items',
@@ -61,6 +64,7 @@ const incomeStatement = [
     cagr: '27.2',
     turnoverPct: '100',
     values: Array(12).fill('5.2'),
+    bold: true,
   },
   {
     label: 'Financial income',
@@ -79,6 +83,7 @@ const incomeStatement = [
     cagr: '27.2',
     turnoverPct: '100',
     values: Array(12).fill('5.2'),
+    bold: true,
   },
   {
     label: 'Taxes',
@@ -91,6 +96,7 @@ const incomeStatement = [
     cagr: '27.2',
     turnoverPct: '100',
     values: Array(12).fill('5.2'),
+    bold: true,
   },
 ];
 
@@ -128,11 +134,35 @@ const IncomeStatementTable = () => {
         <TableBody>
           {incomeStatement.map((row) => (
             <TableRow key={row.label} className="text-[#18181B] h-12">
-              <TableCell>{row.label}</TableCell>
-              <TableCell className="font-normal">{row.cagr}</TableCell>
-              <TableCell className="font-normal">{row.turnoverPct}</TableCell>
+              <TableCell
+                className={`
+                ${row.bold ? 'font-semibold border-b' : 'pl-6 border-b'}
+          ${row.bold ? 'border-[#8F8F91]' : 'border-[#D8D8D9]'}
+        `}
+              >
+                {row.label}
+              </TableCell>
+              <TableCell
+                className={`font-normal border-b ${
+                  row.bold ? 'border-[#8F8F91]' : 'border-[#D8D8D9]'
+                }`}
+              >
+                {row.cagr}
+              </TableCell>
+              <TableCell
+                className={`font-normal border-b ${
+                  row.bold ? 'border-[#8F8F91]' : 'border-[#D8D8D9]'
+                }`}
+              >
+                {row.turnoverPct}
+              </TableCell>
               {row.values.map((val, idx) => (
-                <TableCell key={idx} className="font-normal">
+                <TableCell
+                  key={idx}
+                  className={`font-normal border-b ${
+                    row.bold ? 'border-[#8F8F91]' : 'border-[#D8D8D9]'
+                  }`}
+                >
                   {val}
                 </TableCell>
               ))}
