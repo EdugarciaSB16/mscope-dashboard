@@ -11,17 +11,17 @@ import {
 } from 'recharts';
 
 const data = [
-  { year: '2012', turnover: 25, ebitda: 2.1, ebitdaMargin: 8.4 },
-  { year: '2013', turnover: 28, ebitda: 2.4, ebitdaMargin: 8.6 },
-  { year: '2014', turnover: 26, ebitda: 2.2, ebitdaMargin: 8.5 },
-  { year: '2015', turnover: 24, ebitda: 2.0, ebitdaMargin: 8.3 },
-  { year: '2016', turnover: 27, ebitda: 2.3, ebitdaMargin: 8.5 },
-  { year: '2017', turnover: 29, ebitda: 2.5, ebitdaMargin: 8.6 },
-  { year: '2018', turnover: 31, ebitda: 2.7, ebitdaMargin: 8.7 },
-  { year: '2019', turnover: 33, ebitda: 2.9, ebitdaMargin: 8.8 },
-  { year: '2020', turnover: 30, ebitda: 2.6, ebitdaMargin: 8.7 },
-  { year: '2021', turnover: 32, ebitda: 2.8, ebitdaMargin: 8.8 },
-  { year: '2022', turnover: 35, ebitda: 3.0, ebitdaMargin: 8.6 },
+  { year: '2012', turnover: 10, ebitda: 2.1, ebitdaMargin: 2.4 },
+  { year: '2013', turnover: 28, ebitda: 4.4, ebitdaMargin: 3.6 },
+  { year: '2014', turnover: 26, ebitda: 10, ebitdaMargin: 4.5 },
+  { year: '2015', turnover: 24, ebitda: 3.0, ebitdaMargin: 5.3 },
+  { year: '2016', turnover: 27, ebitda: 4.3, ebitdaMargin: 6.5 },
+  { year: '2017', turnover: 29, ebitda: 7.5, ebitdaMargin: 5.6 },
+  { year: '2018', turnover: 31, ebitda: 6.7, ebitdaMargin: 8.7 },
+  { year: '2019', turnover: 33, ebitda: 12.9, ebitdaMargin: 9.8 },
+  { year: '2020', turnover: 30, ebitda: 9.6, ebitdaMargin: 10 },
+  { year: '2021', turnover: 32, ebitda: 25, ebitdaMargin: 12 },
+  { year: '2022', turnover: 35, ebitda: 18, ebitdaMargin: 11 },
 ];
 
 const HistoricalFinancialChart = () => {
@@ -34,21 +34,21 @@ const HistoricalFinancialChart = () => {
         <CartesianGrid strokeDasharray="3 3" stroke="#f5f5f5" />
         <XAxis
           dataKey="year"
-          tick={{ fill: '#666', fontSize: 12 }}
-          axisLine={{ stroke: '#E5E7EB' }}
+          tick={{ fill: '#8F8F91', fontSize: 12 }}
+          axisLine={{ stroke: '#8F8F91' }}
         />
         <YAxis
           yAxisId="left"
           orientation="left"
-          tick={{ fill: '#666', fontSize: 12 }}
-          axisLine={{ stroke: '#E5E7EB' }}
+          tick={{ fill: '#8F8F91', fontSize: 12 }}
+          axisLine={{ stroke: '#8F8F91' }}
           tickFormatter={(value) => `€${value}M`}
         />
         <YAxis
           yAxisId="right"
           orientation="right"
-          tick={{ fill: '#666', fontSize: 12 }}
-          axisLine={{ stroke: '#E5E7EB' }}
+          tick={{ fill: '#8F8F91', fontSize: 12 }}
+          axisLine={{ stroke: '#8F8F91' }}
           tickFormatter={(value) => `${value}%`}
         />
         <Tooltip
@@ -68,22 +68,22 @@ const HistoricalFinancialChart = () => {
           yAxisId="left"
           dataKey="turnover"
           name="Turnover"
-          fill="#E5E7EB"
-          radius={[4, 4, 0, 0]}
+          fill="#D8D8D9"
+          radius={[8, 8, 0, 0]}
         />
         <Bar
           yAxisId="left"
           dataKey="ebitda"
           name="EBITDA"
-          fill="#D1D5DB"
-          radius={[4, 4, 0, 0]}
+          fill="#A0A0A1"
+          radius={[8, 8, 0, 0]}
         />
         <Line
           yAxisId="right"
           type="monotone"
           dataKey="ebitdaMargin"
           name="EBITDA Margin"
-          stroke="#9CA3AF"
+          stroke="#58585A"
           strokeWidth={2}
           dot={false}
         />
