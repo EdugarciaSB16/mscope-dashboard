@@ -21,18 +21,18 @@ const CompanyAccordion = () => {
           Income Statement
         </AccordionTrigger>
         <AccordionContent>
-          <div className="w-full mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <span className="text-[16px] font-medium leading-[20px]">
+            Historical Financial
+          </span>
+          <div className="w-full mt-4 grid grid-cols-1 md:grid-cols-2">
             <div className="w-full h-[300px] md:h-[400px]">
-              <span className="text-[16px] font-medium leading-[20px]">
-                Historical Financial
-              </span>
               <HistoricalFinancialChart />
             </div>
             <div className="w-full h-[300px] md:h-[400px]">
               <NfdCapexChart />
             </div>
           </div>
-          <div className="w-full pt-5">
+          <div className="w-full pt-2">
             <IncomeStatementTable />
           </div>
         </AccordionContent>

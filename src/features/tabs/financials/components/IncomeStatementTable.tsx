@@ -45,7 +45,7 @@ const IncomeStatementTable: React.FC = () => {
   };
 
   return (
-    <div className="mt-10 overflow-auto">
+    <div className="mt-8 overflow-auto">
       <div className="flex justify-end mb-4">
         <Button
           variant="outline"
